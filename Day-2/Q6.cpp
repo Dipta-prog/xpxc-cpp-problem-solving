@@ -1,3 +1,6 @@
+/*
+https://codeforces.com/group/MWSDmqGsZm/contest/329103/problem/D
+*/
 #include <iostream>
 #include <unordered_set>
 #include <vector>

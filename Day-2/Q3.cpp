@@ -1,3 +1,7 @@
+/*
+https://atcoder.jp/contests/abc124/tasks/abc124_a?lang=en
+*/
+
 #include <iostream>
 using namespace std;
 
