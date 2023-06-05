@@ -1,3 +1,6 @@
+/*
+https://atcoder.jp/contests/abc199/tasks/abc199_a?lang=en
+*/
 #include <iostream>
 using namespace std;
 
