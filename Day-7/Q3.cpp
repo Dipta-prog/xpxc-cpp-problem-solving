@@ -1,36 +1,55 @@
 /*
 https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/O
 */
-#include <iostream>
-#include <vector>
+
+/* #include <iostream>
+#include <string>
 using namespace std;
 
-void countingSort(string& s) {
-    vector<int> count(26, 0);
-
-    for (char c : s) {
-        count[c - 'a']++;
-    }
-
-    int index = 0;
-    for (int i = 0; i < 26; i++) {
-        while (count[i] > 0) {
-            s[index++] = 'a' + i;
-            count[i]--;
-        }
-    }
-}
-
-int main() {
+int main()
+{
     int N;
     cin >> N;
+    int freq[26] = {0};
+    for (int i = 0; i < N; i++)
+    {
+        char ch;
+        cin >> ch;
+        freq[ch - 'a']++;
+    }
 
-    string S;
-    cin >> S;
+    return 0;
+} */
 
-    countingSort(S);
+//
+#include <iostream>
+using namespace std;
 
-    cout << S << endl;
+int main()
+{
+    int N;
+    cin >> N;
+    int freq[26] = {0};
+    for (int i = 0; i < N; i++)
+    {
+        char ch;
+        cin >> ch;
+        freq[ch - 'a']++;
+    }
+
+    for (int i = 0; i < 26; i++)
+    {
+        if (freq[i] > 0)
+        {
+            char ch = 'a' + i;
+            int j = 0;
+            while (j < freq[i])
+            {
+                cout << ch;
+                j++;
+            }
+        }
+    }
 
     return 0;
 }
