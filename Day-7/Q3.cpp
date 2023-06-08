@@ -2,26 +2,6 @@
 https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/O
 */
 
-/* #include <iostream>
-#include <string>
-using namespace std;
-
-int main()
-{
-    int N;
-    cin >> N;
-    int freq[26] = {0};
-    for (int i = 0; i < N; i++)
-    {
-        char ch;
-        cin >> ch;
-        freq[ch - 'a']++;
-    }
-
-    return 0;
-} */
-
-//
 #include <iostream>
 using namespace std;
 
