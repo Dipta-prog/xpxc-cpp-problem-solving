@@ -2,36 +2,37 @@
 
 */
 #include <iostream>
-#include <unordered_map>
 #include <vector>
+#include <algorithm>
 using namespace std;
 
 int main()
 {
-    int t;
+    long t;
     cin >> t;
 
     while (t--)
     {
-        int n;
+        long n;
         cin >> n;
 
-        vector<int> a(n);
-        unordered_map<int, int> count;
+        vector<long> v(n);
+        for (long p = 0; p < n; p++)
+            cin >> v[p];
 
-        for (int i = 0; i < n; i++)
+        sort(v.begin(), v.end());
+
+        long res = -1;
+        for (long p = 2; p < n; p++)
         {
-            cin >> a[i];
-            count[a[i]]++;
-            if (count[a[i]] >= 3)
+            if (v[p - 2] == v[p] && v[p - 1] == v[p])
             {
-                cout << a[i] << "\n";
+                res = v[p];
                 break;
             }
         }
 
-        if (count[a[n - 1]] < 3)
-            cout << -1 << "\n";
+        cout << res << endl;
     }
 
     return 0;
