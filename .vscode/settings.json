@@ -107,6 +107,8 @@
         "variant": "cpp",
         "xlocbuf": "cpp",
         "xlocmes": "cpp",
-        "xtree": "cpp"
+        "xtree": "cpp",
+        "*.tcc": "cpp",
+        "string_view": "cpp"
     }
 }
