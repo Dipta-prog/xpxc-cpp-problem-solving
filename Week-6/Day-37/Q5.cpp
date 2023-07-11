@@ -1,26 +1,30 @@
 /*
 https://codeforces.com/contest/1324/problem/C
 */
-#include <bits/stdc++.h>
+#include <iostream>
+#include <string>
 using namespace std;
 int main()
 {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
     int t;
     cin >> t;
     while (t--)
     {
-        string s;
-        cin >> s;
+        string str;
+        cin >> str;
         int mx = INT_MIN, kol = 1;
-        s += " ";
-        if (s.find('L') == -1)
+        str += " ";
+        if (str.find('L') == -1)
             cout << 1 << endl;
 
         else
         {
-            for (int i = 0; i < s.size() - 1; i++)
+            for (int i = 0; i < str.size() - 1; i++)
             {
-                if (s[i] == s[i + 1] && s[i] == 'L')
+                if (str[i] == str[i + 1] && str[i] == 'L')
                     kol++;
                 else
                 {
